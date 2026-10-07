@@ -6,13 +6,13 @@
 #include <typeinfo>
 
 int main(){
-    auto score;
-    auto points;
-    auto height;
-    auto duration;
-    auto is_active;
-    auto initial;
-    auto title;
+    auto score = 8;
+    auto points = 17327648984929; //long int
+    auto height = 6.2f;
+    auto duration = 90.0;
+    auto is_active = true;
+    auto initial = 'P'; //char denoted by single quotes
+    auto title = "Soccer Champions"; //string denoted by double quote, shows up as PKc for point to const char
 
     std::cout << "The type of score is " << typeid(score).name() << std::endl;
     std::cout << "The type of points is " << typeid(points).name() << std::endl;
