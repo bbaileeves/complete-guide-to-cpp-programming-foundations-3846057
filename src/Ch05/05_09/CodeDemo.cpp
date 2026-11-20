@@ -13,9 +13,26 @@ struct Resource{
 };
 
 double CalculateTotalCost(std::vector<Resource> resources){
-    double result = 0.0;
-    
-    // Write your code here
+    double result = 0.0; 
+    double tax_rate;
+
+    for(int i = 0; i < resources.size(); i++){
+        switch(resources[i].type){
+            case 'B':
+                tax_rate = 0.05;
+                break;
+            case 'L':
+                tax_rate = 0.15;
+                break;
+            case 'E':
+                tax_rate = 0.0;
+                break;  
+            default:
+                tax_rate = 0.0;
+                break;             
+        }
+        result += (resources[i].baseCost * (1 + tax_rate));
+    }
     
     return result;
 }
